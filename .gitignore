@@ -1,2 +1,24 @@
-.venv
+# Ignore env files
 .env
+
+# Ignore bytecode and cache
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Visual Studio Code specific files
+.vscode/
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+.ven/
+
+
