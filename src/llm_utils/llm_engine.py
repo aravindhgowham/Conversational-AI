@@ -19,7 +19,7 @@ Groq_API_Key=os.environ.get("Groq_api_key","")
 
 #validaiton:
 if not Groq_API_Key:
-    raise ValueError("Invalid API Key: 'Groq_api_key' is missing in environment variables.")
+    raise ValueError("Invalid API Key: 'Groq_api_key' is missing in environment variables.")#Done
 
 
 @functools.lru_cache(maxsize=1)
