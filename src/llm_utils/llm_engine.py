@@ -13,7 +13,7 @@ import functools
 load_dotenv()
 
 #Load Environment Variable.
-llm_model = os.getenv("llm_model",None)
+llm_model = os.getenv("LLM_MODEL",None)
 embedding_model = os.getenv("embedding_model",None)
 Groq_API_Key=os.environ.get("Groq_api_key","")
 
