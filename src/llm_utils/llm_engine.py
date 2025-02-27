@@ -15,11 +15,11 @@ load_dotenv()
 #Load Environment Variable.
 llm_model = os.getenv("LLM_MODEL",None)
 embedding_model = os.getenv("embedding_model",None)
-Groq_API_Key=os.environ.get("Groq_api_key","")
+Groq_API_Key=os.environ.get("GROQ_API_KEY","")
 
 #validaiton:
 if not Groq_API_Key:
-    raise ValueError("Invalid API Key: 'Groq_api_key' is missing in environment variables.")#Done
+    raise ValueError("Invalid API Key: 'GROQ_API_KEY' is missing in environment variables.")#Done
 
 
 @functools.lru_cache(maxsize=1)
