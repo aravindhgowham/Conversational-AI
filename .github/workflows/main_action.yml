@@ -1,0 +1,30 @@
+name: run main.py
+
+on:
+  workflow_dispatch:
+
+env:
+    GROQ_API_KEY:${{ secrets.GROQ_API_KEY }}
+    LLM_MODEL:${{ secrets.LLM_MODEL }}
+    embedding_model:${{ secrets.embedding_model }}
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+  
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.0' # install the python version needed
+          
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv 
+          uv sync
+          
