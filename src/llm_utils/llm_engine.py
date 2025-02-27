@@ -16,6 +16,7 @@ load_dotenv()
 llm_model = os.getenv("LLM_MODEL",None)
 embedding_model = os.getenv("embedding_model",None)
 Groq_API_Key=os.environ.get("GROQ_API_KEY","")
+#
 
 #validaiton:
 if not Groq_API_Key:
