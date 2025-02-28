@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 from groq import Groq
 from langchain_groq import ChatGroq
-from langchain.embeddings import HuggingFaceEmbeddings
 from dataclasses import field, dataclass
 from src.llm_utils.Exception.validator import Not_none
 from typing import Annotated
@@ -66,11 +65,6 @@ class SingletoneMeta(type):
             cls._instances[cls] = super().__call__(*args, **kwds)
         return cls._instances[cls]
     
-
-class embedding_engine:
-    def __init__(self, Model:str =embedding_model):
-        self.engine = HuggingFaceEmbeddings(Model)
-
 
 
 class ModelInstance(metaclass=SingletoneMeta):
