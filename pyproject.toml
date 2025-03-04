@@ -13,4 +13,6 @@ dependencies = [
     "uvicorn>=0.34.0",
     "streamlit>=1.42.1",
     "fastapi>=0.115.8",
+    "assemblyai>=0.37.0",
+    "pyaudio>=0.2.14",
 ]
